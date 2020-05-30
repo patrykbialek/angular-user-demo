@@ -7,12 +7,10 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StoryListComponent {
-
   @Input() stories;
   @Output() showDetails = new EventEmitter();
   
   onShowDetails(story: any) {
     this.showDetails.emit(story);
   }
-
 }

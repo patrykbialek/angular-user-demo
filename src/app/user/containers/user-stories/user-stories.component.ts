@@ -1,18 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { of, Observable } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { StoryDetailDialogComponent } from '../../components/user-stories/story-detail/story-detail-dialog.component';
-
-export interface Feed {
-  url: string;
-  title: string;
-  link: string;
-  author: string;
-  description: string;
-  image: string;
-}
-
 export interface Item {
   title: string;
   pubDate: string;
@@ -26,16 +16,11 @@ export interface Item {
   categories: string[];
 }
 
-export interface RootObject {
-  status: string;
-  feed: Feed;
-  items: Item[];
-}
 @Component({
   selector: 'app-user-stories',
   templateUrl: './user-stories.component.html',
 })
-export class UserStoriesComponent implements OnInit {
+export class UserStoriesComponent {
 
   stories$: Observable<Item[]> = of([
     {
@@ -77,8 +62,6 @@ export class UserStoriesComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
   ) { }
-
-  ngOnInit() {}
 
   showDetails(story: Item) {
     const dialogRef = this.dialog.open(StoryDetailDialogComponent, {

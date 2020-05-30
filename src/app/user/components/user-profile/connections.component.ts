@@ -1,18 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-connections',
   templateUrl: './connections.component.html',
-  styleUrls: ['./connections.component.scss']
+  styleUrls: ['./connections.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ConnectionsComponent implements OnInit {
-
+export class ConnectionsComponent {
   @Input() userForm: FormGroup;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
