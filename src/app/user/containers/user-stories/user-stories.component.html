@@ -3,5 +3,17 @@
     <h2>User stories</h2>
   </header>
 
+  <ng-container *ngIf="stories$ | async as stories; else loading">
+    <app-story-list
+      [stories]="stories"
+      (showDetails)="showDetails($event)"
+    ></app-story-list>
+  </ng-container>
+
+  <ng-template #loading>
+    <div class="c-loader u-margin-top">
+      <mat-spinner diameter="64"></mat-spinner>
+    </div>
+  </ng-template>
 
 </section>

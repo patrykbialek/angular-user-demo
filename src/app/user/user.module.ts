@@ -9,16 +9,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserProfileComponent } from './containers/user-profile/user-profile.component';
 import { ConnectionsComponent } from './components/user-profile/connections.component';
 import { EmailSettingsComponent } from './components/user-profile/email-settings.component';
 import { StoryListComponent } from './components/user-stories/story-list/story-list.component';
-import { StoryDetailComponent } from './components/user-stories/story-detail/story-detail.component';
 import { UserStoriesComponent } from './containers/user-stories/user-stories.component';
 import { UserComponent } from './user.component';
+import { StoryDetailDialogComponent } from './components/user-stories/story-detail/story-detail-dialog.component';
 
 
 @NgModule({
@@ -27,9 +28,9 @@ import { UserComponent } from './user.component';
     ConnectionsComponent,
     EmailSettingsComponent,
     StoryListComponent,
-    StoryDetailComponent,
     UserStoriesComponent,
     UserComponent,
+    StoryDetailDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -42,8 +43,13 @@ import { UserComponent } from './user.component';
     MatInputModule,
     MatCheckboxModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
+    MatChipsModule,
 
     UserRoutingModule,
+  ],
+  entryComponents: [
+    StoryDetailDialogComponent,
   ]
 })
 export class UserModule { }

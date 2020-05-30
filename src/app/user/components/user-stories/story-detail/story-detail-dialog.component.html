@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>{{ story.title }}</h2>
+<mat-dialog-content class="mat-typography">
+  <p class="u-margin-bottom" [innerHtml]="story.content"></p>
+  <div>
+    <ng-container *ngFor="let category of story.categories">
+      <span class="c-story__category u-margin-right-small">{{ category }}</span>
+    </ng-container>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

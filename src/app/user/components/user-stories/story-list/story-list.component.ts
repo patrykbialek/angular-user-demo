@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-story-list',
   templateUrl: './story-list.component.html',
-  styleUrls: ['./story-list.component.scss']
+  styleUrls: ['./story-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StoryListComponent implements OnInit {
+export class StoryListComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  @Input() stories;
+  @Output() showDetails = new EventEmitter();
+  
+  onShowDetails(story: any) {
+    this.showDetails.emit(story);
   }
 
 }

@@ -1,0 +1,33 @@
+.c-story-item {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: row;
+
+  cursor: pointer;
+
+  &__author-date {
+    color: #757575;
+    font-size: 14px;
+  }
+
+  &__content {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 2 !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+}

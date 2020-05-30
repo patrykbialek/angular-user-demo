@@ -1,1 +1,18 @@
-<p>story-list works!</p>
+<div>
+  <ng-container *ngFor="let story of stories">
+    <div class="c-story-item u-border-bottom" (click)="onShowDetails(story)">
+      <div>
+        <h3>{{ story.title }}</h3>
+        <p class="c-story-item__content u-padding-bottom-tiny">{{ story.description }}</p>
+        <div class="c-story-item__author-date u-padding-bottom-small">
+          {{ story.author }} &#8226; <time [attr.datetime]="story.pubDate">{{ story.pubDate | date:'LLLL, yyyy' }}</time> 
+        </div>
+      </div>
+      <div class="c-story-item__actions">
+        <button mat-icon-button>
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>
