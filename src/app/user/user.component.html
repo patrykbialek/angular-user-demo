@@ -1,3 +1,17 @@
-<p>user works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>User demo</span>
+    <span class="example-spacer"></span>
+    <a mat-button [routerLink]="['user-profile']">
+      Profile
+    </a>
+    <a mat-button [routerLink]="['user-stories']">
+      Stories
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<main class="o-wrapper">
+
+  <router-outlet></router-outlet>
+</main>
