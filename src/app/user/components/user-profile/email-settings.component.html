@@ -1,1 +1,12 @@
-<p>email-settings works!</p>
+<section class="u-margin-bottom" [formGroup]="userForm">
+  <header>
+    <h4>Email settings</h4>
+  </header>
+  <div formGroupName="emailSettings">
+    <mat-form-field appearance="outline">
+      <mat-label>Email address</mat-label>
+      <input matInput formControlName="email">
+      <mat-icon matSuffix>envelop</mat-icon>
+    </mat-form-field>
+  </div>
+</section>

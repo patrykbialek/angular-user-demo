@@ -1,1 +1,16 @@
-<p>connections works!</p>
+<section class="u-margin-bottom" [formGroup]="userForm">
+  <header>
+    <h4>Connections</h4>
+  </header>
+  <div formGroupName="connections">
+    <div>
+      <mat-checkbox formControlName="facebook">Facebook</mat-checkbox>
+    </div>
+    <div>
+      <mat-checkbox formControlName="twitter">Twitter</mat-checkbox>
+    </div>
+    <div>
+      <mat-checkbox formControlName="google">Google</mat-checkbox>
+    </div>
+  </div>
+</section>

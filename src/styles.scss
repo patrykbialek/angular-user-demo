@@ -21,3 +21,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-left: auto;
   max-width: 1024px;
 }
+
+.u-margin {
+  &-top    { margin-top:    24px!important; }
+  &-right  { margin-right:  24px!important; }
+  &-bottom { margin-bottom: 24px!important; }
+  &-left   { margin-left:   24px!important; }
+  &-top-small    { margin-top:    16px!important; }
+  &-right-small  { margin-right:  16px!important; }
+  &-bottom-small { margin-bottom: 16px!important; }
+  &-left-small   { margin-left:   16px!important; }
+}
+
+.u-border-bottom {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.c-module-heading {
+  color: rgba(0,0,0,.84);
+  font-size: 18px;
+  letter-spacing: 0;
+  position: relative;
+}

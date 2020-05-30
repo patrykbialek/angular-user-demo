@@ -1,1 +1,31 @@
-<p>user-profile works!</p>
+<section>
+  <header class="c-module-heading u-border-bottom">
+    <h2>User profile</h2>
+  </header>
+
+  <form class="u-margin-bottom"
+    [formGroup]="userForm"
+    (ngSubmit)="onSave()"
+    *ngIf="userProfile$ | async; else loading"
+  >
+    <app-email-settings class="u-margin-bottom" [userForm]="userForm"></app-email-settings>
+    <app-connections class="u-margin-bottom" [userForm]="userForm"></app-connections>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+  </form>
+
+  <section *ngIf="result">
+    <header>
+      <h5>Result</h5>
+    </header>
+    <pre>{{ result | json }}</pre>
+  </section>
+
+  <ng-template #loading>
+    <div class="u-margin-top">
+      <mat-spinner diameter="64"></mat-spinner>
+    </div>
+  </ng-template>
+</section>
+

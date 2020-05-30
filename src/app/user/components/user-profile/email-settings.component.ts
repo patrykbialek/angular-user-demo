@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormGroupName } from '@angular/forms';
 
 @Component({
   selector: 'app-email-settings',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailSettingsComponent implements OnInit {
 
+  @Input() userForm: FormGroup;
+
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.userForm)
   }
 
 }

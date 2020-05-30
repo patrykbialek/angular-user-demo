@@ -1,12 +1,14 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="u-margin-bottom">
   <mat-toolbar-row>
     <span>User demo</span>
     <span class="example-spacer"></span>
-    <a mat-button [routerLink]="['user-profile']">
-      Profile
+    <a class="u-margin-left" mat-button [routerLink]="['user-stories']">
+      <mat-icon>list</mat-icon>
+      <span class="u-margin-left-small">Stories</span>
     </a>
-    <a mat-button [routerLink]="['user-stories']">
-      Stories
+    <a class="u-margin-left" mat-button [routerLink]="['user-profile']">
+      <mat-icon>person</mat-icon>
+      <span class="u-margin-left-small">Profile</span>
     </a>
   </mat-toolbar-row>
 </mat-toolbar>

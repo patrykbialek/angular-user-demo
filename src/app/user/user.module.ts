@@ -5,6 +5,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserProfileComponent } from './containers/user-profile/user-profile.component';
@@ -33,6 +38,10 @@ import { UserComponent } from './user.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
 
     UserRoutingModule,
   ]
